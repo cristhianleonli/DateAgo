@@ -110,4 +110,10 @@ class DateAgoTests: XCTestCase {
         XCTAssertEqual(quotient, 2)
         XCTAssertEqual(unit, english.month)
     }
+    
+    func test_0() {
+        let a = Date()
+        let v = a.timeAgoDisplay()
+        XCTAssertEqual(v, "Just now")
+    }
 }
