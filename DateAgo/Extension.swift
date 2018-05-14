@@ -44,9 +44,8 @@ public extension Date {
             return (secondsAgo / day, units.day)
         } else if secondsAgo < month {
             return (secondsAgo / week, units.week)
-        } else {
-            return (secondsAgo / month, units.month)
         }
+        return (secondsAgo / month, units.month)
     }
 
     /**
