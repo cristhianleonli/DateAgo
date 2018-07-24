@@ -36,4 +36,4 @@ $ brew update
 $ brew install carthage
 ```
 
-To integrate DateAgo into your Xcode project using Carthage, specify it in your Cartfile: github "cristhianleonli/DateAgo"
+To integrate DateAgo into your Xcode project using Carthage, specify it in your Cartfile: `github "cristhianleonli/DateAgo"`
