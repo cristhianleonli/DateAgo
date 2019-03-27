@@ -6,9 +6,13 @@
 //  Copyright © 2019 Cristhian León. All rights reserved.
 //
 
-public struct Interval {
+public struct Interval: CustomStringConvertible {
     public var value: Int
     public var unit: TimeUnit
+    
+    public var description: String {
+        return "Interval(value: \(value), unit: \(unit))"
+    }
     
     public enum TimeUnit {
         case second
