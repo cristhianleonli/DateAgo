@@ -7,7 +7,7 @@ This date extension helps to show the "time ago"
 ```swift
 let year: TimeInterval = 29_030_400
 
-let time = Date(timeIntervalSinceNow: -year * 1)
+let time = Date(timeIntervalSinceNow: -year)
 print(time.timeAgo(as: .second))    // Interval(value: 29030400, unit: second)
 print(time.timeAgo(as: .minute))    // Interval(value: 483840, unit: minute)
 print(time.timeAgo(as: .hour))      // Interval(value: 8064, unit: hour)
