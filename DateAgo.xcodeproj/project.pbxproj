@@ -10,10 +10,11 @@
 		0E704E542152EF9800C3D90C /* DateAgo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E704E4A2152EF9800C3D90C /* DateAgo.framework */; };
 		0E704E592152EF9800C3D90C /* DateAgoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E704E582152EF9800C3D90C /* DateAgoTests.swift */; };
 		0E704E5B2152EF9800C3D90C /* DateAgo.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E704E4D2152EF9800C3D90C /* DateAgo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E704E682152EFC200C3D90C /* TimeUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E704E642152EFC100C3D90C /* TimeUnit.swift */; };
-		0E704E692152EFC200C3D90C /* TimeLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E704E652152EFC100C3D90C /* TimeLanguage.swift */; };
-		0E704E6A2152EFC200C3D90C /* TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E704E662152EFC100C3D90C /* TimeAgo.swift */; };
 		0E704E6B2152EFC200C3D90C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E704E672152EFC200C3D90C /* Extension.swift */; };
+		9FFD91B8224B60CF00963575 /* DateCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD91B7224B60CF00963575 /* DateCalculator.swift */; };
+		9FFD91BA224B630700963575 /* Interval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD91B9224B630700963575 /* Interval.swift */; };
+		9FFD91BE224B6FE900963575 /* DateCalculator+Private.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD91BD224B6FE900963575 /* DateCalculator+Private.swift */; };
+		9FFD91C0224B733F00963575 /* ConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFD91BF224B733F00963575 /* ConversionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +34,11 @@
 		0E704E532152EF9800C3D90C /* DateAgoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateAgoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E704E582152EF9800C3D90C /* DateAgoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAgoTests.swift; sourceTree = "<group>"; };
 		0E704E5A2152EF9800C3D90C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0E704E642152EFC100C3D90C /* TimeUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUnit.swift; sourceTree = "<group>"; };
-		0E704E652152EFC100C3D90C /* TimeLanguage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLanguage.swift; sourceTree = "<group>"; };
-		0E704E662152EFC100C3D90C /* TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeAgo.swift; sourceTree = "<group>"; };
 		0E704E672152EFC200C3D90C /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		9FFD91B7224B60CF00963575 /* DateCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCalculator.swift; sourceTree = "<group>"; };
+		9FFD91B9224B630700963575 /* Interval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interval.swift; sourceTree = "<group>"; };
+		9FFD91BD224B6FE900963575 /* DateCalculator+Private.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateCalculator+Private.swift"; sourceTree = "<group>"; };
+		9FFD91BF224B733F00963575 /* ConversionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +81,12 @@
 		0E704E4C2152EF9800C3D90C /* DateAgo */ = {
 			isa = PBXGroup;
 			children = (
-				0E704E672152EFC200C3D90C /* Extension.swift */,
-				0E704E652152EFC100C3D90C /* TimeLanguage.swift */,
-				0E704E642152EFC100C3D90C /* TimeUnit.swift */,
-				0E704E662152EFC100C3D90C /* TimeAgo.swift */,
-				0E704E4D2152EF9800C3D90C /* DateAgo.h */,
 				0E704E4E2152EF9800C3D90C /* Info.plist */,
+				0E704E4D2152EF9800C3D90C /* DateAgo.h */,
+				0E704E672152EFC200C3D90C /* Extension.swift */,
+				9FFD91B9224B630700963575 /* Interval.swift */,
+				9FFD91B7224B60CF00963575 /* DateCalculator.swift */,
+				9FFD91BD224B6FE900963575 /* DateCalculator+Private.swift */,
 			);
 			path = DateAgo;
 			sourceTree = "<group>";
@@ -92,8 +94,9 @@
 		0E704E572152EF9800C3D90C /* DateAgoTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E704E582152EF9800C3D90C /* DateAgoTests.swift */,
 				0E704E5A2152EF9800C3D90C /* Info.plist */,
+				0E704E582152EF9800C3D90C /* DateAgoTests.swift */,
+				9FFD91BF224B733F00963575 /* ConversionTests.swift */,
 			);
 			path = DateAgoTests;
 			sourceTree = "<group>";
@@ -206,9 +209,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E704E692152EFC200C3D90C /* TimeLanguage.swift in Sources */,
-				0E704E682152EFC200C3D90C /* TimeUnit.swift in Sources */,
-				0E704E6A2152EFC200C3D90C /* TimeAgo.swift in Sources */,
+				9FFD91BA224B630700963575 /* Interval.swift in Sources */,
+				9FFD91BE224B6FE900963575 /* DateCalculator+Private.swift in Sources */,
+				9FFD91B8224B60CF00963575 /* DateCalculator.swift in Sources */,
 				0E704E6B2152EFC200C3D90C /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E704E592152EF9800C3D90C /* DateAgoTests.swift in Sources */,
+				9FFD91C0224B733F00963575 /* ConversionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
