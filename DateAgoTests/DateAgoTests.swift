@@ -16,6 +16,7 @@ class DateAgoTests: XCTestCase {
     let day: TimeInterval = 86_400
     let week: TimeInterval = 604_800
     let month: TimeInterval = 2_419_200
+    let year: TimeInterval = 29_030_400
     
     func test_GetUnitAndQuotient_TwoMinutesAgo() {
         let time = Date(timeIntervalSinceNow: -minute * 2)
@@ -55,5 +56,13 @@ class DateAgoTests: XCTestCase {
         
         XCTAssertEqual(interval.value, 2)
         XCTAssertEqual(interval.unit, .month)
+    }
+    
+    func test_GetUnitAndQuotient_TwoYearsAgo() {
+        let time = Date(timeIntervalSinceNow: -year * 2)
+        let interval = time.timeAgo(as: .year)
+        
+        XCTAssertEqual(interval.value, 2)
+        XCTAssertEqual(interval.unit, .year)
     }
 }

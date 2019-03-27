@@ -15,6 +15,7 @@ struct DateCalculator {
     let day = 86_400
     let week = 604_800
     let month = 2_419_200
+    let year = 29_030_400
     
     private init() {
     }

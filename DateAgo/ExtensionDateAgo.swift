@@ -25,6 +25,7 @@ struct Interval: CustomStringConvertible {
         case day
         case week
         case month
+        case year
     }
     
     init() {
@@ -45,6 +46,7 @@ struct DateCalculator {
     private let day = 86_400
     private let week = 604_800
     private let month = 2_419_200
+    private let year = 29_030_400
     
     private init() {
     }
@@ -88,32 +90,29 @@ struct DateCalculator {
             interval.value = seconds / week
         case .month:
             interval.value = seconds / month
+        case .year:
+            interval.value = seconds / year
         }
         
         return interval
     }
     
     private func parseConveniently(fromSeconds seconds: Int) -> Interval {
-        if seconds < minute {
+        switch seconds {
+        case 0..<minute:
             return Interval(value: seconds, unit: .second)
-        }
-        
-        if seconds < hour {
+        case minute..<hour:
             return Interval(value: seconds / minute, unit: .minute)
-        }
-        
-        if seconds < day {
+        case hour..<day:
             return Interval(value: seconds / hour, unit: .hour)
-        }
-        
-        if seconds < week {
+        case day..<week:
             return Interval(value: seconds / day, unit: .day)
-        }
-        
-        if seconds < month {
+        case week..<month:
             return Interval(value: seconds / week, unit: .week)
+        case month..<year:
+            return Interval(value: seconds / month, unit: .month)
+        default:
+            return Interval(value: seconds / year, unit: .year)
         }
-        
-        return Interval(value: seconds / month, unit: .month)
     }
 }

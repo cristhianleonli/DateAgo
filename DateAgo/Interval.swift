@@ -21,6 +21,7 @@ public struct Interval: CustomStringConvertible {
         case day
         case week
         case month
+        case year
     }
     
     public init() {

@@ -13,6 +13,7 @@ print(time.timeAgo(as: .hour))      // Interval(value: 3360, unit: hour)
 print(time.timeAgo(as: .day))       // Interval(value: 140, unit: day)
 print(time.timeAgo(as: .week))      // Interval(value: 20, unit: week)
 print(time.timeAgo(as: .month))     // Interval(value: 5, unit: month)
+print(time.timeAgo(as: .year))      // Interval(value: 5, unit: month)
 print(time.timeAgo())               // Interval(value: 5, unit: month)
 ```
 

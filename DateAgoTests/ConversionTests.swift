@@ -16,6 +16,7 @@ class ConversionTests: XCTestCase {
     let day: TimeInterval = 86_400
     let week: TimeInterval = 604_800
     let month: TimeInterval = 2_419_200
+    let year: TimeInterval = 29_030_400
     
     func test_TimeAgo_TwoSecondsAgo() {
         let time = Date(timeIntervalSinceNow: -2)
@@ -63,5 +64,21 @@ class ConversionTests: XCTestCase {
         
         XCTAssertEqual(interval.value, 2)
         XCTAssertEqual(interval.unit, .month)
+    }
+    
+    func test_TimeAgo_TwoYearsAgo() {
+        let time = Date(timeIntervalSinceNow: -year * 2)
+        let interval = time.timeAgo()
+        
+        XCTAssertEqual(interval.value, 2)
+        XCTAssertEqual(interval.unit, .year)
+    }
+    
+    func test_TimeAgo_SixtySeconds() {
+        let time = Date(timeIntervalSinceNow: -60)
+        let interval = time.timeAgo()
+        
+        XCTAssertEqual(interval.value, 1)
+        XCTAssertEqual(interval.unit, .minute)
     }
 }
