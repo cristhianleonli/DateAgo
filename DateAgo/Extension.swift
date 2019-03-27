@@ -6,7 +6,7 @@
 //  Copyright © 2018 Cristhian León. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public extension Date {
     public func timeAgo(as unit: Interval.TimeUnit) -> Interval {
