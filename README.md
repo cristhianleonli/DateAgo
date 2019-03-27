@@ -19,4 +19,4 @@ print(time.timeAgo())               // Interval(value: 5, unit: month)
 ## Setup
 
 * Carthage: `github "cristhianleonli/DateAgo"`
-* Or just copy the file `DateAgo/ExtensionDateAgo.swift`
+* Or just copy the file [DateAgo/ExtensionDateAgo.swift](https://github.com/cristhianleonli/DateAgo/blob/master/DateAgo/ExtensionDateAgo.swift)
